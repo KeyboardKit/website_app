@@ -1,0 +1,19 @@
+
+
+{% assign size = {{ page.hero | size }} %}
+
+{% if size == 0 %}
+<div style="padding-top: 70px"></div>
+{% else %}
+<section>
+    <div class="hero {{ page.hero }}">
+        <div class="wrapper">
+            {% if page.hero == "home" %}
+                {% include heros/home.html %}
+            {% elsif page.hero == "blog" %}
+            {% endif %}
+        </div>
+        <div class="hero-line"></div>
+    </div>
+</section>
+{% endif %}
